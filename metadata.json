@@ -1,0 +1,8 @@
+
+{
+  "name": "Japan MM 4 Skills Sensei",
+  "description": "A comprehensive JLPT preparation suite focusing on 8 core skills from N5 to N3, featuring AI-powered content generation, text-to-speech pronunciation, and interactive practice.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
