@@ -483,11 +483,96 @@ export const INITIAL_N5_LESSONS: Lesson[] = [
       explanationMm: 'ယဉ်ကျေးစွာ ဖော်ပြသော စကားစုများကို ရေးသားလေ့ကျင့်ပါ။',
       exampleSentences: ['おはようございます。', 'さようなら。']
     }
+  },
+  {
+    level: 'N5', skill: 'Writing', lessonId: 'n5-writing-4', title: 'Katakana Practice',
+    content: {
+      text: 'アイウエオカキクケコ', furigana: 'アイウエオカキクケコ', meaning: 'Practice writing these katakana characters.',
+      meaningMm: 'ဤကာတာကာနာ အက္ခရာများကို ရေးသားလေ့ကျင့်ပါ။',
+      explanation: 'Katakana is used for foreign words.',
+      explanationMm: 'ကာတာကာနာသည် နိုင်ငံခြားစကားလုံးများအတွက် အသုံးပြုပါသည်။',
+      exampleSentences: ['ア', 'イ', 'ウ', 'エ', 'オ']
+    }
+  },
+  {
+    level: 'N5', skill: 'Writing', lessonId: 'n5-writing-5', title: 'Numbers and Dates',
+    content: {
+      text: '今日は2024年1月1日です。', furigana: 'きょうは2024ねん1がつ1にちです。', meaning: 'Today is January 1st, 2024.',
+      meaningMm: 'ဒီနေ့သည် ၂၀၂၄ ခုနှစ် ဇန်နဝါရီလ ၁ ရက်ဖြစ်ပါသည်။',
+      explanation: 'Practice writing dates and numbers.',
+      explanationMm: 'ရက်စွဲနှင့် နံပါတ်များကို ရေးသားလေ့ကျင့်ပါ။',
+      exampleSentences: ['2024年', '1月1日', '今日は']
+    }
+  },
+
+  // ADDITIONAL VOCABULARY LESSONS
+  {
+    level: 'N5', skill: 'Vocabulary', lessonId: 'n5-vocab-5', title: 'Colors',
+    content: {
+      text: '色', furigana: 'いろ', meaning: 'Color',
+      meaningMm: 'အရောင်',
+      explanation: 'Basic color vocabulary.',
+      explanationMm: 'အခြေခံ အရောင်စကားလုံးများ။',
+      exampleSentences: ['赤い色', '青い色', '白い色']
+    }
+  },
+  {
+    level: 'N5', skill: 'Vocabulary', lessonId: 'n5-vocab-6', title: 'Food and Drink',
+    content: {
+      text: '食べ物と飲み物', furigana: 'たべものとのみもの', meaning: 'Food and Drink',
+      meaningMm: 'စားစရာနှင့် သောက်စရာ',
+      explanation: 'Essential food vocabulary.',
+      explanationMm: 'အရေးကြီးသော အစားအသောက် စကားလုံးများ။',
+      exampleSentences: ['ご飯', '水', 'お茶']
+    }
+  },
+  {
+    level: 'N5', skill: 'Vocabulary', lessonId: 'n5-vocab-7', title: 'Days of the Week',
+    content: {
+      text: '月曜日・火曜日・水曜日', furigana: 'げつようび・かようび・すいようび', meaning: 'Monday, Tuesday, Wednesday',
+      meaningMm: 'တနင်္လာ၊ အင်္ဂါ၊ ဗုဒ္ဓဟူး',
+      explanation: 'Learn the days of the week.',
+      explanationMm: 'အပတ်ရှိ ရက်များကို လေ့လာပါ။',
+      exampleSentences: ['月曜日', '火曜日', '水曜日']
+    }
+  },
+
+  // ADDITIONAL KANJI LESSONS
+  {
+    level: 'N5', skill: 'Kanji', lessonId: 'n5-kanji-6', title: 'Time Kanji',
+    content: {
+      text: '時分秒', furigana: 'じふんびょう', meaning: 'Hour, Minute, Second',
+      meaningMm: 'နာရီ၊ မိနစ်၊ စက္ကန့်',
+      explanation: 'Time measurement kanji.',
+      explanationMm: 'အချိန်တိုင်းတာခြင်း ခန်ဂျီများ။',
+      exampleSentences: ['一時間', '五分', '三十秒']
+    }
+  },
+  {
+    level: 'N5', skill: 'Kanji', lessonId: 'n5-kanji-7', title: 'Direction Kanji',
+    content: {
+      text: '上下左右', furigana: 'じょうげさゆう', meaning: 'Up, Down, Left, Right',
+      meaningMm: 'အပေါ်၊ အောက်၊ ဘယ်၊ ညာ',
+      explanation: 'Directional kanji characters.',
+      explanationMm: 'ဦးတည်ရာပြသော ခန်ဂျီအက္ခရာများ။',
+      exampleSentences: ['上', '下', '左', '右']
+    }
+  },
+  {
+    level: 'N5', skill: 'Kanji', lessonId: 'n5-kanji-8', title: 'Family Kanji',
+    content: {
+      text: '父母兄弟姉妹', furigana: 'ちちははきょうだいしまい', meaning: 'Father, Mother, Siblings',
+      meaningMm: 'အဖေ၊ အမေ၊ ညီအစ်ကိုများ',
+      explanation: 'Family relationship kanji.',
+      explanationMm: 'မိသားစုဆက်ဆံရေး ခန်ဂျီများ။',
+      exampleSentences: ['お父さん', 'お母さん', '兄弟']
+    }
   }
 ];
 
 // N4 Lessons - Intermediate Level
 export const INITIAL_N4_LESSONS: Lesson[] = [
+  // KANA
   {
     level: 'N4', skill: 'Kana', lessonId: 'n4-kana-1', title: 'Hiragana: S Group',
     content: {
@@ -499,6 +584,28 @@ export const INITIAL_N4_LESSONS: Lesson[] = [
     }
   },
   {
+    level: 'N4', skill: 'Kana', lessonId: 'n4-kana-2', title: 'Hiragana: T Group',
+    content: {
+      text: 'たちつてと', furigana: 'たちつてと', meaning: 'Ta, Chi, Tsu, Te, To',
+      meaningMm: 'တ၊ ချိ၊ စု၊ တဲ၊ တို',
+      explanation: 'T sounds with tongue against teeth.',
+      explanationMm: 'လျှာကို သွားများနှင့် ထိစေပြီး ထုတ်လုပ်သော T အသံများ။',
+      exampleSentences: ['たこ', 'ちず', 'つばめ']
+    }
+  },
+  {
+    level: 'N4', skill: 'Kana', lessonId: 'n4-kana-3', title: 'Hiragana: N Group',
+    content: {
+      text: 'なにぬねの', furigana: 'なにぬねの', meaning: 'Na, Ni, Nu, Ne, No',
+      meaningMm: 'န၊ နိ၊ နု၊ နဲ၊ နို',
+      explanation: 'N sounds with tongue tip against gums.',
+      explanationMm: 'လျှာအစွန်းကို ဂမ်းနှင့် ထိစေပြီး ထုတ်လုပ်သော N အသံများ။',
+      exampleSentences: ['なつ', 'にわ', 'ぬま']
+    }
+  },
+
+  // KANJI
+  {
     level: 'N4', skill: 'Kanji', lessonId: 'n4-kanji-1', title: 'Weather Kanji',
     content: {
       text: '雨雪風', furigana: 'あめゆきかぜ', meaning: 'Rain, Snow, Wind',
@@ -508,6 +615,28 @@ export const INITIAL_N4_LESSONS: Lesson[] = [
       exampleSentences: ['雨が降っています。', '雪が積もっています。']
     }
   },
+  {
+    level: 'N4', skill: 'Kanji', lessonId: 'n4-kanji-2', title: 'Nature Kanji',
+    content: {
+      text: '花鳥魚', furigana: 'はなとりさかな', meaning: 'Flower, Bird, Fish',
+      meaningMm: 'ပန်း၊ ငှက်၊ ငါး',
+      explanation: 'Nature and animal kanji.',
+      explanationMm: 'သဘာဝနှင့် တိရစ္ဆာန် ခန်ဂျီများ။',
+      exampleSentences: ['桜の花', '小鳥', '金魚']
+    }
+  },
+  {
+    level: 'N4', skill: 'Kanji', lessonId: 'n4-kanji-3', title: 'Building Kanji',
+    content: {
+      text: '部屋店駅', furigana: 'へやみせえき', meaning: 'Room, Shop, Station',
+      meaningMm: 'အခန်း၊ ဆိုင်၊ ဘူတာရုံ',
+      explanation: 'Building and location kanji.',
+      explanationMm: 'အဆောက်အအုံနှင့် နေရာ ခန်ဂျီများ။',
+      exampleSentences: ['私の部屋', '本屋さん', '駅前']
+    }
+  },
+
+  // VOCABULARY
   {
     level: 'N4', skill: 'Vocabulary', lessonId: 'n4-vocab-1', title: 'Transportation',
     content: {
@@ -519,6 +648,28 @@ export const INITIAL_N4_LESSONS: Lesson[] = [
     }
   },
   {
+    level: 'N4', skill: 'Vocabulary', lessonId: 'n4-vocab-2', title: 'Weather Terms',
+    content: {
+      text: '晴れ・雨・雪', furigana: 'はれ・あめ・ゆき', meaning: 'Sunny, Rain, Snow',
+      meaningMm: 'နေသာသော၊ မိုး၊ ဆီး',
+      explanation: 'Common weather expressions.',
+      explanationMm: 'အသုံးအများဆုံး ရာသီဥတု ဖော်ပြချက်များ။',
+      exampleSentences: ['今日は晴れです。', '雨が降っています。']
+    }
+  },
+  {
+    level: 'N4', skill: 'Vocabulary', lessonId: 'n4-vocab-3', title: 'Hobbies',
+    content: {
+      text: '読書・音楽・スポーツ', furigana: 'どくしょ・おんがく・すぽーつ', meaning: 'Reading, Music, Sports',
+      meaningMm: 'စာဖတ်ခြင်း၊ ဂီတ၊ အားကစား',
+      explanation: 'Common hobby vocabulary.',
+      explanationMm: 'အသုံးအများဆုံး အပန်းဖြေ စကားလုံးများ။',
+      exampleSentences: ['本を読むのが好きです。', '音楽を聞きます。']
+    }
+  },
+
+  // GRAMMAR
+  {
     level: 'N4', skill: 'Grammar', lessonId: 'n4-grammar-1', title: 'Past Tense ~ました',
     content: {
       text: '食べました。', furigana: 'たべました。', meaning: 'I ate.',
@@ -527,11 +678,80 @@ export const INITIAL_N4_LESSONS: Lesson[] = [
       explanationMm: 'ကြိယာအမြစ်များသို့ ~ました ကို ထည့်ပြီး အတိတ်ကြိယာကို ပြဆိုပါသည်။',
       exampleSentences: ['昨日、映画を見ました。', '朝ご飯を食べました。']
     }
+  },
+  {
+    level: 'N4', skill: 'Grammar', lessonId: 'n4-grammar-2', title: 'Volitional Form ~ましょう',
+    content: {
+      text: '行きましょう。', furigana: 'いきましょう。', meaning: 'Let\'s go.',
+      meaningMm: 'သွားကြရအောင်။',
+      explanation: 'Expresses suggestion or volition.',
+      explanationMm: 'အကြံပြုခြင်း သို့မဟုတ် ဆန္ဒကို ဖော်ပြပါသည်။',
+      exampleSentences: ['一緒に食べましょう。', '勉強しましょう。']
+    }
+  },
+  {
+    level: 'N4', skill: 'Grammar', lessonId: 'n4-grammar-3', title: 'Potential Form ~ことができます',
+    content: {
+      text: '泳ぐことができます。', furigana: 'およぐことができます。', meaning: 'I can swim.',
+      meaningMm: 'ငါရေကူးတတ်ပါသည်။',
+      explanation: 'Expresses ability or possibility.',
+      explanationMm: 'စွမ်းရည် သို့မဟုတ် ဖြစ်နိုင်ခြေကို ဖော်ပြပါသည်။',
+      exampleSentences: ['日本語を話すことができます。', '料理を作ることができます。']
+    }
+  },
+
+  // LISTENING
+  {
+    level: 'N4', skill: 'Listening', lessonId: 'n4-listening-1', title: 'Weather Reports',
+    content: {
+      text: '今日は晴れです。', furigana: 'きょうははれです。', meaning: 'Today is sunny.',
+      meaningMm: 'ဒီနေ့သည် နေသာသော ရက်ဖြစ်ပါသည်။',
+      explanation: 'Practice listening to weather information.',
+      explanationMm: 'ရာသီဥတု သတင်းများကို နားထောင်လေ့ကျင့်ပါ။',
+      exampleSentences: ['明日は雨です。', '今日は暖かいです。']
+    }
+  },
+
+  // SPEAKING
+  {
+    level: 'N4', skill: 'Speaking', lessonId: 'n4-speaking-1', title: 'Making Plans',
+    content: {
+      text: '明日、一緒に映画を見ませんか。', furigana: 'あした、いっしょにえいがをみませんか。', meaning: 'Would you like to watch a movie together tomorrow?',
+      meaningMm: 'မနက်ဖြန် အတူတူ ရုပ်ရှင်ကြည့်မလား။',
+      explanation: 'Practice making suggestions.',
+      explanationMm: 'အကြံပြုခြင်းကို လေ့ကျင့်ပါ။',
+      exampleSentences: ['一緒に食事しませんか。', '散歩しませんか。']
+    }
+  },
+
+  // READING
+  {
+    level: 'N4', skill: 'Reading', lessonId: 'n4-reading-1', title: 'Short Stories',
+    content: {
+      text: '私は毎日、電車で会社に行きます。', furigana: 'わたしはまいにち、でんしゃでかいしゃにいきます。', meaning: 'I go to work by train every day.',
+      meaningMm: 'ကျွန်တော်သည် နေ့စဉ် ရထားဖြင့် ကုမ္ပဏီသို့ သွားပါသည်။',
+      explanation: 'Reading intermediate level sentences.',
+      explanationMm: 'အလယ်အလတ်အဆင့် ဝါကျများကို ဖတ်ရှုပါ။',
+      exampleSentences: ['友達と買い物に行きました。', '週末は家で休みます。']
+    }
+  },
+
+  // WRITING
+  {
+    level: 'N4', skill: 'Writing', lessonId: 'n4-writing-1', title: 'Diary Entry',
+    content: {
+      text: '今日は学校でテストがありました。', furigana: 'きょうはがっこうでてすとがありました。', meaning: 'Today I had a test at school.',
+      meaningMm: 'ဒီနေ့ ကျောင်းတွင် စာမေးပွဲ ရှိခဲ့ပါသည်။',
+      explanation: 'Practice writing diary entries.',
+      explanationMm: 'ရက်စဉ်မှတ်တမ်းရေးခြင်းကို လေ့ကျင့်ပါ။',
+      exampleSentences: ['昨日は友達に会いました。', '明日から夏休みです。']
+    }
   }
 ];
 
 // N3 Lessons - Advanced Level
 export const INITIAL_N3_LESSONS: Lesson[] = [
+  // KANA
   {
     level: 'N3', skill: 'Kana', lessonId: 'n3-kana-1', title: 'Hiragana: T Group',
     content: {
@@ -543,6 +763,28 @@ export const INITIAL_N3_LESSONS: Lesson[] = [
     }
   },
   {
+    level: 'N3', skill: 'Kana', lessonId: 'n3-kana-2', title: 'Hiragana: H Group',
+    content: {
+      text: 'はひふへほ', furigana: 'はひふへほ', meaning: 'Ha, Hi, Fu, He, Ho',
+      meaningMm: 'ဟ၊ ဟိ၊ ဖု၊ ဟဲ၊ ဟို',
+      explanation: 'H sounds with breath between lips.',
+      explanationMm: 'နှုတ်ခမ်းများကြားတွင် လေထုတ်ပြီး ထုတ်လုပ်သော H အသံများ။',
+      exampleSentences: ['はな', 'ひまわり', 'ふじさん']
+    }
+  },
+  {
+    level: 'N3', skill: 'Kana', lessonId: 'n3-kana-3', title: 'Hiragana: M Group',
+    content: {
+      text: 'まみむめも', furigana: 'まみむめも', meaning: 'Ma, Mi, Mu, Me, Mo',
+      meaningMm: 'မ၊ မိ၊ မု၊ မဲ၊ မို',
+      explanation: 'M sounds with lips closed.',
+      explanationMm: 'နှုတ်ခမ်းများကို ပိတ်ပြီး ထုတ်လုပ်သော M အသံများ။',
+      exampleSentences: ['まめ', 'みかん', 'むし']
+    }
+  },
+
+  // KANJI
+  {
     level: 'N3', skill: 'Kanji', lessonId: 'n3-kanji-1', title: 'Emotion Kanji',
     content: {
       text: '喜怒哀楽', furigana: 'きどあいらく', meaning: 'Joy, Anger, Sorrow, Pleasure',
@@ -552,6 +794,28 @@ export const INITIAL_N3_LESSONS: Lesson[] = [
       exampleSentences: ['喜んでいます。', '怒っています。']
     }
   },
+  {
+    level: 'N3', skill: 'Kanji', lessonId: 'n3-kanji-2', title: 'Abstract Concepts',
+    content: {
+      text: '幸不幸運', furigana: 'こうふこううん', meaning: 'Happiness, Unhappiness, Fortune',
+      meaningMm: 'ချမ်းသာခြင်း၊ ချမ်းသာမှု မရှိခြင်း၊ ကံကောင်းခြင်း',
+      explanation: 'Abstract philosophical concepts.',
+      explanationMm: 'စိတ်ကူးယဉ် ဒဿနိကဗေဒ အယူအဆများ။',
+      exampleSentences: ['幸せです。', '不幸です。']
+    }
+  },
+  {
+    level: 'N3', skill: 'Kanji', lessonId: 'n3-kanji-3', title: 'Advanced Numbers',
+    content: {
+      text: '百万千万億', furigana: 'ひゃくまんせんまんおく', meaning: 'Million, Ten Million, Hundred Million',
+      meaningMm: 'သန်း၊ ကိုးသန်း၊ ကုဋေ',
+      explanation: 'Large number kanji.',
+      explanationMm: 'ကြီးမားသော နံပါတ် ခန်ဂျီများ။',
+      exampleSentences: ['100万', '1000万', '1億']
+    }
+  },
+
+  // VOCABULARY
   {
     level: 'N3', skill: 'Vocabulary', lessonId: 'n3-vocab-1', title: 'Technology',
     content: {
@@ -563,6 +827,28 @@ export const INITIAL_N3_LESSONS: Lesson[] = [
     }
   },
   {
+    level: 'N3', skill: 'Vocabulary', lessonId: 'n3-vocab-2', title: 'Business Terms',
+    content: {
+      text: '会議・報告・企画', furigana: 'かいぎ・ほうこく・きかく', meaning: 'Meeting, Report, Planning',
+      meaningMm: 'အစည်းအဝေး၊ အစီရင်ခံစာ၊ စီစဉ်ခြင်း',
+      explanation: 'Common business vocabulary.',
+      explanationMm: 'အသုံးအများဆုံး စီးပွားရေးဆိုင်ရာ စကားလုံးများ။',
+      exampleSentences: ['会議があります。', '報告書を書きます。']
+    }
+  },
+  {
+    level: 'N3', skill: 'Vocabulary', lessonId: 'n3-vocab-3', title: 'Academic Terms',
+    content: {
+      text: '研究・実験・分析', furigana: 'けんきゅう・じっけん・ぶんせき', meaning: 'Research, Experiment, Analysis',
+      meaningMm: 'သုတေသန၊ စမ်းသပ်ခြင်း၊ ခွဲခြမ်းစိတ်ဖြာခြင်း',
+      explanation: 'Academic and scientific vocabulary.',
+      explanationMm: 'ပညာရပ်ဆိုင်ရာ နှင့် သိပ္ပံဆိုင်ရာ စကားလုံးများ။',
+      exampleSentences: ['研究をしています。', '実験を行います。']
+    }
+  },
+
+  // GRAMMAR
+  {
     level: 'N3', skill: 'Grammar', lessonId: 'n3-grammar-1', title: 'Conditional ~たら',
     content: {
       text: '雨が降ったら、傘を持って行きます。', furigana: 'あめがふったら、かさをもっていきます。', meaning: 'If it rains, I will take an umbrella.',
@@ -570,6 +856,74 @@ export const INITIAL_N3_LESSONS: Lesson[] = [
       explanation: 'Conditional form indicating "if" situations.',
       explanationMm: '"ရင်" ဟူသော အခြေအနေကို ပြဆိုသော ကြိယာပုံစံ။',
       exampleSentences: ['時間がなかったら、電話します。', 'お金があったら、旅行に行きます。']
+    }
+  },
+  {
+    level: 'N3', skill: 'Grammar', lessonId: 'n3-grammar-2', title: 'Passive Form ~られる',
+    content: {
+      text: '本が読まれます。', furigana: 'ほんがよまれます。', meaning: 'The book is read.',
+      meaningMm: 'စာအုပ်ကို ဖတ်ရှုခြင်းကို ခံရသည်။',
+      explanation: 'Expresses passive voice.',
+      explanationMm: 'ခံယူပုံစံကို ဖော်ပြပါသည်။',
+      exampleSentences: ['花が買われます。', '家が建てられます。']
+    }
+  },
+  {
+    level: 'N3', skill: 'Grammar', lessonId: 'n3-grammar-3', title: 'Causative Form ~させる',
+    content: {
+      text: '子供に勉強させます。', furigana: 'こどもにべんきょうさせます。', meaning: 'I make the child study.',
+      meaningMm: 'ကလေးကို စာသင်ခိုင်းသည်။',
+      explanation: 'Expresses causation or making someone do something.',
+      explanationMm: 'တစ်စုံတစ်ဦးကို တစ်စုံတစ်ခု လုပ်ခိုင်းခြင်းကို ဖော်ပြပါသည်။',
+      exampleSentences: ['生徒に歌を歌わせます。', '友達に手伝わせます。']
+    }
+  },
+
+  // LISTENING
+  {
+    level: 'N3', skill: 'Listening', lessonId: 'n3-listening-1', title: 'News Reports',
+    content: {
+      text: '政府は新しい政策を発表しました。', furigana: 'せいふはあたらしいせいさくをはっぴょうしました。', meaning: 'The government announced a new policy.',
+      meaningMm: 'အစိုးရသည် မူဝါဒအသစ်ကို ကြေညာခဲ့သည်။',
+      explanation: 'Practice listening to news-style content.',
+      explanationMm: 'သတင်းစဉ်ပုံစံ အကြောင်းအရာကို နားထောင်လေ့ကျင့်ပါ။',
+      exampleSentences: ['経済が成長しています。', '環境問題が深刻です。']
+    }
+  },
+
+  // SPEAKING
+  {
+    level: 'N3', skill: 'Speaking', lessonId: 'n3-speaking-1', title: 'Formal Presentations',
+    content: {
+      text: '皆様、こんにちは。本日はお時間をいただきありがとうございます。', furigana: 'みなさま、こんにちは。ほんじつはおじかんをいただきありがとうございます。', meaning: 'Everyone, hello. Thank you for taking your time today.',
+      meaningMm: 'လူတိုင်း မင်္ဂလာနေ့ခင်းပါ။ ဒီနေ့ အချိန်ယူပေးသည့်အတွက် ကျေးဇူးတင်ပါသည်။',
+      explanation: 'Practice formal presentation language.',
+      explanationMm: 'တင်ပြခြင်းဆိုင်ရာ ယဉ်ကျေးစွာ ပြောဆိုခြင်းကို လေ့ကျင့်ပါ။',
+      exampleSentences: ['ご清聴ありがとうございました。', 'ご質問をお受けします。']
+    }
+  },
+
+  // READING
+  {
+    level: 'N3', skill: 'Reading', lessonId: 'n3-reading-1', title: 'Literary Texts',
+    content: {
+      text: '古い時代、人々は自然と共に生きていた。', furigana: 'ふるいじだい、ひとびとはしぜんとともにいきていた。', meaning: 'In ancient times, people lived together with nature.',
+      meaningMm: 'ရှေးဟောင်းသော ခေတ်က လူများသည် သဘာဝနှင့် အတူယှဉ်တွဲ နေထိုင်ခဲ့ကြသည်။',
+      explanation: 'Reading advanced literary content.',
+      explanationMm: 'အဆင့်မြင့် စာပေဆိုင်ရာ အကြောင်းအရာကို ဖတ်ရှုပါ။',
+      exampleSentences: ['文化は時代と共に変化する。', '伝統を守り続けることが大切だ。']
+    }
+  },
+
+  // WRITING
+  {
+    level: 'N3', skill: 'Writing', lessonId: 'n3-writing-1', title: 'Formal Letters',
+    content: {
+      text: '拝啓 時下ますますご清栄のこととお慶び申し上げます。', furigana: 'はいけい じかますますごせいえいのこととおいわいもうしあげます。', meaning: 'Dear Sir/Madam, I hope this letter finds you well.',
+      meaningMm: 'လေးစားအပ်သော လူကြီးမင်းထံ၊ ဤစာကို ကျန်းမာစွာ ရရှိပါစေလို့ ဆုတောင်းပါသည်။',
+      explanation: 'Practice writing formal business letters.',
+      explanationMm: 'စီးပွားရေးဆိုင်ရာ ယဉ်ကျေးစွာ စာရေးခြင်းကို လေ့ကျင့်ပါ။',
+      exampleSentences: ['敬具', '謹白', '拝呈']
     }
   }
 ];

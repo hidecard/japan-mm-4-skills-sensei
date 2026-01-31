@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Lesson } from '../types';
 
 interface LessonViewerProps {
@@ -11,6 +11,42 @@ type LangMode = 'en' | 'mm' | 'both';
 export const LessonViewer: React.FC<LessonViewerProps> = ({ lesson, onComplete }) => {
   const [showFurigana, setShowFurigana] = useState(true);
   const [langMode, setLangMode] = useState<LangMode>('both');
+  const [isSpeaking, setIsSpeaking] = useState(false);
+  const [speechSupported, setSpeechSupported] = useState(false);
+
+  // Check for speech synthesis support
+  useEffect(() => {
+    if ('speechSynthesis' in window) {
+      setSpeechSupported(true);
+    }
+  }, []);
+
+  // Speak function using Web Speech API
+  const speak = (text: string) => {
+    if ('speechSynthesis' in window) {
+      // Cancel any ongoing speech
+      window.speechSynthesis.cancel();
+
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'ja-JP'; // Japanese language
+      utterance.rate = 0.8; // Slightly slower for learning
+      utterance.pitch = 1;
+
+      utterance.onstart = () => setIsSpeaking(true);
+      utterance.onend = () => setIsSpeaking(false);
+      utterance.onerror = () => setIsSpeaking(false);
+
+      window.speechSynthesis.speak(utterance);
+    }
+  };
+
+  // Stop speaking function
+  const stopSpeaking = () => {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      setIsSpeaking(false);
+    }
+  };
 
   return (
     <div className="max-w-3xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500 pb-12">
@@ -45,7 +81,7 @@ export const LessonViewer: React.FC<LessonViewerProps> = ({ lesson, onComplete }
           {/* Main Lesson Text */}
           <div className="space-y-4 w-full">
             <h2 className="text-xl font-bold text-slate-400 uppercase tracking-widest">{lesson.title}</h2>
-            
+
             <div className="min-h-[120px] flex flex-col items-center justify-center">
               <p className="text-4xl md:text-5xl font-bold text-slate-800 leading-relaxed mb-4">
                 {lesson.content.text}
@@ -56,6 +92,21 @@ export const LessonViewer: React.FC<LessonViewerProps> = ({ lesson, onComplete }
                 </p>
               )}
             </div>
+
+            {/* Listen Button */}
+            {speechSupported && (
+              <div className="pt-4">
+                <button
+                  onClick={() => isSpeaking ? stopSpeaking() : speak(lesson.content.text)}
+                  className={`w-16 h-16 rounded-full flex items-center justify-center text-2xl shadow-lg transition-all ${
+                    isSpeaking ? 'bg-red-500 hover:bg-red-600' : 'bg-indigo-600 hover:bg-indigo-700'
+                  } text-white`}
+                  title={isSpeaking ? 'Stop listening' : 'Listen to pronunciation'}
+                >
+                  <i className={`fa-solid ${isSpeaking ? 'fa-stop' : 'fa-volume-high'}`}></i>
+                </button>
+              </div>
+            )}
           </div>
 
           <div className="w-full h-px bg-slate-100"></div>
