@@ -66,11 +66,11 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center text-white text-xl">
+              <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center text-white text-xl">
                 <i className="fa-solid fa-graduation-cap"></i>
               </div>
               <h1 className="text-xl font-extrabold text-slate-800 tracking-tight hidden sm:block">
-                Japan MM <span className="text-indigo-600">Sensei</span>
+                Japan MM <span className="text-red-600">Sensei</span>
               </h1>
             </div>
 
@@ -80,7 +80,7 @@ const App: React.FC = () => {
                   key={l}
                   onClick={() => handleLevelChange(l)}
                   className={`px-4 py-1.5 text-sm font-bold rounded-lg transition-all ${
-                    level === l ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'
+                    level === l ? 'bg-white text-red-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'
                   }`}
                 >
                   {l}
@@ -91,7 +91,7 @@ const App: React.FC = () => {
             <div className="flex items-center space-x-4">
               <div className="hidden md:block text-right">
                 <p className="text-[10px] font-bold text-slate-400 uppercase">Progress</p>
-                <p className="text-sm font-bold text-indigo-600">{progress.completedLessons.length} Mastered</p>
+                <p className="text-sm font-bold text-red-600">{progress.completedLessons.length} Mastered</p>
               </div>
               <div className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-500">
                 <i className="fa-solid fa-user"></i>
@@ -145,7 +145,7 @@ const App: React.FC = () => {
                     <h4 className="font-bold text-slate-800">{skill} Proficiency</h4>
                     <p className="text-sm text-slate-500">Mastery level at {level}</p>
                  </div>
-                 <span className="text-indigo-600 font-black">
+                 <span className="text-red-600 font-black">
                    {Math.min(100, Math.floor((currentLessonIndex + 1) / (currentSkillLessons.length || 1) * 100))}%
                  </span>
                </div>
@@ -168,10 +168,10 @@ const App: React.FC = () => {
              <button 
                 key={l} 
                 onClick={() => handleLevelChange(l)}
-                className={`flex flex-col items-center space-y-1 ${level === l ? 'text-indigo-600' : 'text-slate-400'}`}
+                className={`flex flex-col items-center space-y-1 ${level === l ? 'text-red-600' : 'text-slate-400'}`}
              >
                <span className="text-xs font-black">{l}</span>
-               <div className={`w-1.5 h-1.5 rounded-full ${level === l ? 'bg-indigo-600' : 'bg-transparent'}`}></div>
+                <div className={`w-1.5 h-1.5 rounded-full ${level === l ? 'bg-red-600' : 'bg-transparent'}`}></div>
              </button>
            ))}
         </div>

@@ -54,23 +54,23 @@ export const LessonViewer: React.FC<LessonViewerProps> = ({ lesson, onComplete }
         {/* Controls Overlay */}
         <div className="absolute top-0 right-0 p-6 flex flex-wrap gap-2 justify-end">
           <div className="flex bg-slate-100 p-1 rounded-full text-[10px] font-bold">
-            <button 
+            <button
               onClick={() => setLangMode('en')}
-              className={`px-2 py-1 rounded-full ${langMode === 'en' ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-500'}`}
+              className={`px-2 py-1 rounded-full ${langMode === 'en' ? 'bg-white text-red-600 shadow-sm' : 'text-slate-500'}`}
             >EN</button>
-            <button 
+            <button
               onClick={() => setLangMode('mm')}
-              className={`px-2 py-1 rounded-full ${langMode === 'mm' ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-500'}`}
+              className={`px-2 py-1 rounded-full ${langMode === 'mm' ? 'bg-white text-red-600 shadow-sm' : 'text-slate-500'}`}
             >MM</button>
-            <button 
+            <button
               onClick={() => setLangMode('both')}
-              className={`px-2 py-1 rounded-full ${langMode === 'both' ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-500'}`}
+              className={`px-2 py-1 rounded-full ${langMode === 'both' ? 'bg-white text-red-600 shadow-sm' : 'text-slate-500'}`}
             >ALL</button>
           </div>
           <button 
             onClick={() => setShowFurigana(!showFurigana)}
             className={`text-xs font-bold px-3 py-1.5 rounded-full transition-colors ${
-              showFurigana ? 'bg-indigo-100 text-indigo-700' : 'bg-slate-100 text-slate-500'
+              showFurigana ? 'bg-red-100 text-red-700' : 'bg-slate-100 text-slate-500'
             }`}
           >
             {showFurigana ? 'Furigana' : 'Kanji Only'}
@@ -87,7 +87,7 @@ export const LessonViewer: React.FC<LessonViewerProps> = ({ lesson, onComplete }
                 {lesson.content.text}
               </p>
               {showFurigana && (
-                <p className="text-xl md:text-2xl text-indigo-500 font-medium animate-in fade-in slide-in-from-top-2">
+              <p className="text-xl md:text-2xl text-red-500 font-medium animate-in fade-in slide-in-from-top-2">
                   {lesson.content.furigana}
                 </p>
               )}
@@ -99,7 +99,7 @@ export const LessonViewer: React.FC<LessonViewerProps> = ({ lesson, onComplete }
                 <button
                   onClick={() => isSpeaking ? stopSpeaking() : speak(lesson.content.text)}
                   className={`w-16 h-16 rounded-full flex items-center justify-center text-2xl shadow-lg transition-all ${
-                    isSpeaking ? 'bg-red-500 hover:bg-red-600' : 'bg-indigo-600 hover:bg-indigo-700'
+                    isSpeaking ? 'bg-red-500 hover:bg-red-600' : 'bg-red-600 hover:bg-red-700'
                   } text-white`}
                   title={isSpeaking ? 'Stop listening' : 'Listen to pronunciation'}
                 >
@@ -119,7 +119,7 @@ export const LessonViewer: React.FC<LessonViewerProps> = ({ lesson, onComplete }
               </p>
             )}
             {(langMode === 'mm' || langMode === 'both') && lesson.content.meaningMm && (
-              <p className="text-xl md:text-2xl text-indigo-600 font-medium leading-relaxed">
+              <p className="text-xl md:text-2xl text-red-600 font-medium leading-relaxed">
                 &ldquo;{lesson.content.meaningMm}&rdquo;
               </p>
             )}
@@ -135,7 +135,7 @@ export const LessonViewer: React.FC<LessonViewerProps> = ({ lesson, onComplete }
           <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest px-4">Example Usage / အသုံးအနှုန်းပုံစံ</h3>
           <div className="grid gap-4">
             {lesson.content.exampleSentences.map((sentence, idx) => (
-              <div key={idx} className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:border-indigo-200 transition-colors">
+              <div key={idx} className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:border-red-200 transition-colors">
                 <p className="text-lg text-slate-700 font-medium">{sentence}</p>
               </div>
             ))}
@@ -145,7 +145,7 @@ export const LessonViewer: React.FC<LessonViewerProps> = ({ lesson, onComplete }
 
       {/* Explanation Section */}
       {(lesson.content.explanation || lesson.content.explanationMm) && (
-        <div className="bg-indigo-50 border border-indigo-100 rounded-3xl p-6 md:p-8 space-y-4 relative animate-in fade-in slide-in-from-bottom-2">
+        <div className="bg-red-50 border border-red-100 rounded-3xl p-6 md:p-8 space-y-4 relative animate-in fade-in slide-in-from-bottom-2">
           <div className="flex items-center space-x-3 text-indigo-700">
             <div className="w-8 h-8 rounded-lg bg-indigo-200 flex items-center justify-center">
               <i className="fa-solid fa-lightbulb"></i>

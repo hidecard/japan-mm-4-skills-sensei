@@ -5,14 +5,14 @@ const lesson = (level: Lesson['level'], skill: Lesson['skill'], lessonId: string
 export const LEVELS: JLPTLevel[] = ['N5', 'N4', 'N3'];
 
 export const SKILLS: { name: SkillName; icon: string; color: string }[] = [
-  { name: 'Kana', icon: 'fa-font', color: 'bg-rose-500' },
-  { name: 'Kanji', icon: 'fa-characters', color: 'bg-orange-500' },
-  { name: 'Vocabulary', icon: 'fa-book', color: 'bg-amber-500' },
-  { name: 'Grammar', icon: 'fa-code-branch', color: 'bg-emerald-500' },
-  { name: 'Listening', icon: 'fa-headphones', color: 'bg-sky-500' },
-  { name: 'Speaking', icon: 'fa-comment', color: 'bg-indigo-500' },
-  { name: 'Reading', icon: 'fa-file-lines', color: 'bg-purple-500' },
-  { name: 'Writing', icon: 'fa-pen-nib', color: 'bg-pink-500' },
+  { name: 'Kana', icon: 'fa-font', color: 'bg-red-500' },
+  { name: 'Kanji', icon: 'fa-characters', color: 'bg-red-600' },
+  { name: 'Vocabulary', icon: 'fa-book', color: 'bg-red-700' },
+  { name: 'Grammar', icon: 'fa-code-branch', color: 'bg-red-800' },
+  { name: 'Listening', icon: 'fa-headphones', color: 'bg-red-500' },
+  { name: 'Speaking', icon: 'fa-comment', color: 'bg-red-600' },
+  { name: 'Reading', icon: 'fa-file-lines', color: 'bg-red-700' },
+  { name: 'Writing', icon: 'fa-pen-nib', color: 'bg-red-800' },
 ];
 
 // Extra lessons (all levels, all skills)
