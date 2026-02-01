@@ -103,11 +103,11 @@ const App: React.FC = () => {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          
+
           {/* Skill Selector Sidebar */}
           <div className="lg:col-span-1 space-y-6">
-            <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm">
-              <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6 px-2">Choose Skill</h3>
+            <div className="bg-red-50 rounded-3xl p-6 border border-red-200 shadow-sm">
+              <h3 className="text-xs font-bold text-red-600 uppercase tracking-widest mb-6 px-2">Choose Skill</h3>
               <div className="grid grid-cols-2 lg:grid-cols-1 gap-3">
                 {SKILLS.map(s => (
                   <SkillCard
@@ -126,15 +126,15 @@ const App: React.FC = () => {
           {/* Main Content Area */}
           <div className="lg:col-span-3">
             {currentLesson ? (
-              <LessonViewer 
-                lesson={currentLesson} 
-                onComplete={handleCompleteLesson} 
+              <LessonViewer
+                lesson={currentLesson}
+                onComplete={handleCompleteLesson}
               />
             ) : (
-              <div className="bg-white rounded-3xl p-12 shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center space-y-4">
-                <div className="text-6xl text-slate-200"><i className="fa-solid fa-hourglass-start"></i></div>
-                <h2 className="text-2xl font-bold text-slate-800">No Content Ready</h2>
-                <p className="text-slate-500 max-w-md">The lessons for {level} {skill} are currently being developed.</p>
+              <div className="bg-white rounded-3xl p-12 shadow-sm border border-red-100 flex flex-col items-center justify-center text-center space-y-4">
+                <div className="text-6xl text-red-200"><i className="fa-solid fa-hourglass-start"></i></div>
+                <h2 className="text-2xl font-bold text-red-800">No Content Ready</h2>
+                <p className="text-red-600 max-w-md">The lessons for {level} {skill} are currently being developed.</p>
               </div>
             )}
 
@@ -142,16 +142,16 @@ const App: React.FC = () => {
             <div className="mt-12">
                <div className="flex justify-between items-end mb-4 px-2">
                  <div>
-                    <h4 className="font-bold text-slate-800">{skill} Proficiency</h4>
-                    <p className="text-sm text-slate-500">Mastery level at {level}</p>
+                    <h4 className="font-bold text-red-800">{skill} Proficiency</h4>
+                    <p className="text-sm text-red-600">Mastery level at {level}</p>
                  </div>
                  <span className="text-red-600 font-black">
                    {Math.min(100, Math.floor((currentLessonIndex + 1) / (currentSkillLessons.length || 1) * 100))}%
                  </span>
                </div>
-               <div className="h-3 w-full bg-slate-200 rounded-full overflow-hidden shadow-inner">
-                 <div 
-                   className={`h-full transition-all duration-1000 ease-out ${SKILLS.find(s => s.name === skill)?.color || 'bg-indigo-600'}`}
+               <div className="h-3 w-full bg-red-100 rounded-full overflow-hidden shadow-inner">
+                 <div
+                   className={`h-full transition-all duration-1000 ease-out bg-red-600`}
                    style={{ width: `${Math.min(100, ((currentLessonIndex + 1) / (currentSkillLessons.length || 1)) * 100)}%` }}
                  ></div>
                </div>

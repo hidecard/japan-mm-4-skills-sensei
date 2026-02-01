@@ -132,11 +132,11 @@ export const LessonViewer: React.FC<LessonViewerProps> = ({ lesson, onComplete }
       {/* Example Sentences Section */}
       {lesson.content.exampleSentences && lesson.content.exampleSentences.length > 0 && (
         <div className="space-y-4">
-          <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest px-4">Example Usage / အသုံးအနှုန်းပုံစံ</h3>
+          <h3 className="text-sm font-bold text-red-600 uppercase tracking-widest px-4">Example Usage / အသုံးအနှုန်းပုံစံ</h3>
           <div className="grid gap-4">
             {lesson.content.exampleSentences.map((sentence, idx) => (
-              <div key={idx} className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:border-red-200 transition-colors">
-                <p className="text-lg text-slate-700 font-medium">{sentence}</p>
+              <div key={idx} className="bg-white rounded-2xl p-4 md:p-6 border border-red-100 shadow-sm hover:border-red-200 transition-colors">
+                <p className="text-base md:text-lg text-red-800 font-medium">{sentence}</p>
               </div>
             ))}
           </div>
@@ -145,37 +145,37 @@ export const LessonViewer: React.FC<LessonViewerProps> = ({ lesson, onComplete }
 
       {/* Explanation Section */}
       {(lesson.content.explanation || lesson.content.explanationMm) && (
-        <div className="bg-red-50 border border-red-100 rounded-3xl p-6 md:p-8 space-y-4 relative animate-in fade-in slide-in-from-bottom-2">
-          <div className="flex items-center space-x-3 text-indigo-700">
-            <div className="w-8 h-8 rounded-lg bg-indigo-200 flex items-center justify-center">
+        <div className="bg-red-50 border border-red-100 rounded-3xl p-4 md:p-6 lg:p-8 space-y-4 relative animate-in fade-in slide-in-from-bottom-2">
+          <div className="flex items-center space-x-3 text-red-700">
+            <div className="w-8 h-8 rounded-lg bg-red-200 flex items-center justify-center">
               <i className="fa-solid fa-lightbulb"></i>
             </div>
             <h3 className="font-bold text-lg">Sensei's Note / ဆရာ့မှတ်စု</h3>
           </div>
-          
+
           <div className="space-y-4 pl-11">
             {(langMode === 'en' || langMode === 'both') && lesson.content.explanation && (
-              <p className="text-slate-700 leading-relaxed border-l-2 border-indigo-200 pl-4">
+              <p className="text-red-800 leading-relaxed border-l-2 border-red-200 pl-4">
                 {lesson.content.explanation}
               </p>
             )}
             {(langMode === 'mm' || langMode === 'both') && lesson.content.explanationMm && (
-              <p className="text-indigo-900 font-medium leading-relaxed bg-white/50 p-4 rounded-xl">
+              <p className="text-red-900 font-medium leading-relaxed bg-white/50 p-4 rounded-xl">
                 {lesson.content.explanationMm}
               </p>
             )}
           </div>
         </div>
       )}
-      
+
       {/* Visual Indicator for Writing Practice */}
       {lesson.skill === 'Writing' && (
-        <div className="bg-amber-50 border-2 border-dashed border-amber-200 rounded-3xl p-6 text-center">
-          <div className="flex items-center justify-center space-x-2 text-amber-700 mb-2">
+        <div className="bg-red-50 border-2 border-dashed border-red-200 rounded-3xl p-4 md:p-6 text-center">
+          <div className="flex items-center justify-center space-x-2 text-red-700 mb-2">
             <i className="fa-solid fa-pen-fancy"></i>
             <p className="font-bold">Writing Practice / ရေးသားလေ့ကျင့်ခြင်း</p>
           </div>
-          <p className="text-amber-800 text-sm">Grab your notebook! Try to write this sentence three times. / ဗလာစာအုပ်ထဲတွင် ၃ ကြိမ်ခန့် ရေးသားလေ့ကျင့်ပါ။</p>
+          <p className="text-red-800 text-sm">Grab your notebook! Try to write this sentence three times. / ဗလာစာအုပ်ထဲတွင် ၃ ကြိမ်ခန့် ရေးသားလေ့ကျင့်ပါ။</p>
         </div>
       )}
 
@@ -183,7 +183,7 @@ export const LessonViewer: React.FC<LessonViewerProps> = ({ lesson, onComplete }
       <div className="flex justify-center pt-4">
         <button
           onClick={onComplete}
-          className="group px-10 h-16 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg shadow-lg hover:shadow-emerald-200 transition-all flex items-center space-x-3 active:scale-95"
+          className="group px-6 md:px-10 h-14 md:h-16 rounded-full bg-red-600 hover:bg-red-700 text-white font-bold text-base md:text-lg shadow-lg hover:shadow-red-200 transition-all flex items-center space-x-3 active:scale-95"
         >
           <span>Next Lesson / နောက်တစ်ခန်း</span>
           <i className="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
