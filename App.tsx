@@ -96,8 +96,8 @@ const App: React.FC = () => {
 
             <div className="flex items-center space-x-4">
               <div className="hidden md:block text-right">
-                <p className="text-[10px] font-bold text-red-500 uppercase">Progress</p>
-                <p className="text-sm font-bold text-red-600">{progress.completedLessons.length} Mastered</p>
+                <p className="text-[10px] font-bold text-white uppercase">Progress</p>
+                <p className="text-sm font-bold text-white">{progress.completedLessons.length} Mastered</p>
               </div>
               <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-600 hover:bg-red-200 transition-colors cursor-pointer">
                 <i className="fa-solid fa-user"></i>
