@@ -52,25 +52,25 @@ export const LessonViewer: React.FC<LessonViewerProps> = ({ lesson, onComplete }
     <div className="max-w-3xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500 pb-12">
       <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-slate-100 relative overflow-hidden">
         {/* Controls Overlay */}
-        <div className="absolute top-0 right-0 p-6 flex flex-wrap gap-2 justify-end">
-          <div className="flex bg-slate-100 p-1 rounded-full text-[10px] font-bold">
+        <div className="absolute top-0 right-0 p-4 md:p-6 flex flex-wrap gap-2 justify-end">
+          <div className="flex bg-red-50 p-1 rounded-full text-[10px] font-bold border border-red-200">
             <button
               onClick={() => setLangMode('en')}
-              className={`px-2 py-1 rounded-full ${langMode === 'en' ? 'bg-white text-red-600 shadow-sm' : 'text-slate-500'}`}
+              className={`px-2 py-1 rounded-full transition-all hover:scale-105 ${langMode === 'en' ? 'bg-red-600 text-white shadow-sm' : 'text-red-700 hover:text-red-800'}`}
             >EN</button>
             <button
               onClick={() => setLangMode('mm')}
-              className={`px-2 py-1 rounded-full ${langMode === 'mm' ? 'bg-white text-red-600 shadow-sm' : 'text-slate-500'}`}
+              className={`px-2 py-1 rounded-full transition-all hover:scale-105 ${langMode === 'mm' ? 'bg-red-600 text-white shadow-sm' : 'text-red-700 hover:text-red-800'}`}
             >MM</button>
             <button
               onClick={() => setLangMode('both')}
-              className={`px-2 py-1 rounded-full ${langMode === 'both' ? 'bg-white text-red-600 shadow-sm' : 'text-slate-500'}`}
+              className={`px-2 py-1 rounded-full transition-all hover:scale-105 ${langMode === 'both' ? 'bg-red-600 text-white shadow-sm' : 'text-red-700 hover:text-red-800'}`}
             >ALL</button>
           </div>
-          <button 
+          <button
             onClick={() => setShowFurigana(!showFurigana)}
-            className={`text-xs font-bold px-3 py-1.5 rounded-full transition-colors ${
-              showFurigana ? 'bg-red-100 text-red-700' : 'bg-slate-100 text-slate-500'
+            className={`text-xs font-bold px-3 py-1.5 rounded-full transition-all hover:scale-105 ${
+              showFurigana ? 'bg-red-600 text-white shadow-sm' : 'bg-red-100 text-red-700 hover:bg-red-200'
             }`}
           >
             {showFurigana ? 'Furigana' : 'Kanji Only'}

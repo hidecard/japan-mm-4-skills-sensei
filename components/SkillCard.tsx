@@ -20,7 +20,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({ name, icon, color, isSelec
           : 'bg-white text-slate-600 hover:bg-slate-50 border border-slate-200 shadow-sm'
       }`}
     >
-      <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-xl transition-colors ${isSelected ? 'bg-white/20' : color + ' text-white'}`}>
+      <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-xl transition-colors ${isSelected ? 'bg-white/20' : 'bg-red-600 text-white'}`}>
         <i className={`fa-solid ${icon}`}></i>
       </div>
       <span className="font-bold text-sm tracking-wide">{name}</span>
